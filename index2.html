@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominando grid layouts no CSS</title>
+    <style>
+        .container {
+            display: grid;
+            padding: 10px;
+            background: #ccc;
+            height: 200px;
+            margin-bottom: 10px;
+
+            /*grid-template-columns: 25% 25% 25% 25%;*/
+            grid-template-columns: 1fr 1fr 1fr 1fr; /*fração*/
+            /*grid-template-rows: 200px 200px;*/
+            grid-template-rows: 1fr 1fr; /*observa o height do container*/
+        }
+
+        .container-02 {
+            display: grid;
+            padding: 10px;
+            background: #ccc;
+            height: 200px;
+
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .container-03 {
+            display: grid;
+            padding: 10px;
+            background: #ccc;
+            height: 200px;
+
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .container-04 {
+            display: grid;
+            padding: 10px;
+            background: #ccc;
+            height: 200px;
+
+            grid-template-columns: min-content max-content;
+        }
+
+        .item {
+            border: solid 1px black;
+        }
+
+        .item-01 {
+            background: #1abc9c;
+        }
+
+        .item-02 {
+            background: #2ecc71;
+        }
+
+        .item-03 {
+            background: #3498db;
+        }
+
+        .item-04 {
+            background: #9b59b6;
+        }
+
+        .item-05 {
+            background: #c0392b;
+        }
+
+        .item-06 {
+            background: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-01">Item 01</div>
+        <div class="item item-02">Item 02</div>
+        <div class="item item-03">Item 03</div>
+        <div class="item item-04">Item 04</div>
+        <div class="item item-05">Item 05</div>
+        <div class="item item-06">Item 06</div>
+    </div>
+    <div class="container-02">
+        <div class="item item-01">Item 01</div>
+        <div class="item item-02">Item 02</div>
+        <div class="item item-03">Item 03</div>
+        <div class="item item-04">Item 04</div>
+        <div class="item item-05">Item 05</div>
+        <div class="item item-06">Item 06</div>
+    </div>
+    <div class="container-03">
+        <div class="item item-01">Item 01</div>
+        <div class="item item-02">Item 02</div>
+        <div class="item item-03">Item 03</div>
+        <div class="item item-04">Item 04</div>
+        <div class="item item-05">Item 05</div>
+        <div class="item item-06">Item 06</div>
+    </div>
+
+    <div class="container-04">
+        <div class="item item-01">GRID CSS LAYOUT</div>
+        <div class="item item-02">02</div>
+        <div class="item item-03">03</div>
+        <div class="item item-04">Igor de Souza Morais</div>
+        <div class="item item-05">05</div>
+        <div class="item item-06">06</div>
+    </div>
+</body>
+</html>
