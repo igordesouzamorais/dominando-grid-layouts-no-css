@@ -4,8 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dominando grid layouts no CSS</title>
+    <style>
+        .container {
+            display: grid;
+            border: solid 1px black;
+            padding: 10px;
+        }
+
+        .item {
+            background-color: aquamarine;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="item">Item 01</div>
+        <div class="item">Item 02</div>
+        <div class="item">Item 03</div>
+    </div>
+    <div class="container">
+        <div class="item">Item 01</div>
+        <div class="item">Item 02</div>
+        <div class="item">Item 03</div>
+    </div>
 </body>
 </html>
