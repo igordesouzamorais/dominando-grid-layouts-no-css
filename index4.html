@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominando grid layouts no CSS</title>
+    <style>
+        .container {            
+            padding: 10px;
+            background: yellow;
+            margin-bottom: 20px;
+
+            display: grid;
+            grid-template-columns: repeat(2, minmax(50px, 500px));
+
+            grid-template-rows: repeat(4, minmax(50px, auto));
+            /* grid-auto-rows: minmax(100px, auto); */
+        }
+
+        .item {
+            border: solid 1px black;
+        }
+
+        .item-01 {
+            background: #1abc9c;
+        }
+
+        .item-02 {
+            background: #2ecc71;
+        }
+
+        .item-03 {
+            background: #3498db;
+        }
+
+        .item-04 {
+            background: #9b59b6;
+        }
+
+        .item-05 {
+            background: #c0392b;
+        }
+
+        .item-06 {
+            background: #e74c3c;
+        }
+
+        .item-07 {
+            background: #d2691e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-01">Item 01</div>
+        <div class="item item-02">Item 02</div>
+        <div class="item item-03">Item 03</div>
+        <div class="item item-04">Item 04</div>
+        <div class="item item-05">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, eos fugiat placeat corporis doloribus reprehenderit sint dolorem, deleniti culpa, quod repellendus ullam consectetur quae? Dolores vel necessitatibus quas. Impedit eos ut nisi. Recusandae et quibusdam in. Ex aliquid quidem nemo optio, perspiciatis dolorem nam odit ratione fugiat sed eum deserunt minus fuga commodi architecto eligendi obcaecati veritatis laborum facilis nesciunt excepturi tenetur natus? Libero quisquam iure culpa debitis. Molestias, minima. Magni aut distinctio ab aliquam voluptatibus velit doloribus laborum vel, ipsam atque assumenda perspiciatis omnis quibusdam beatae. Tempore dolore, vero aspernatur, temporibus unde, error numquam debitis maxime quo amet odio?            
+        </div>
+        <div class="item item-06">Item 06</div>
+        <div class="item item-07">Item 07</div>
+    </div>
+</body>
+</html>
