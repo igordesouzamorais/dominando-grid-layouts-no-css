@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominando grid layouts no CSS</title>
+    <style>
+        .container {            
+            display: grid;
+            border: solid 2px black;
+            background: cyan;
+
+            grid-template-columns: [col-1] 1fr [col-2] 1fr [col-3] 1fr [col-4];
+            grid-template-rows: [row-1] 100px [row-2] 100px [row-3];
+        }
+
+        .selected {
+            background: darkorchid;
+            
+            grid-area: row-2 / col-2 / row-3 / col-3;
+        }
+
+        .item {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item selected">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>
