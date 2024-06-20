@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominando grid layouts no CSS</title>
+    <style>
+        body {
+            display: grid;
+            height: 100vh;
+
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 100px 4fr 1fr;
+
+            grid-template-areas:
+                "logo navbar"
+                "sidebar main"
+                "sidebar footer"
+            ;
+        }
+
+        .logo {
+            background: cyan;
+            grid-area: logo;
+        }
+
+        nav {
+            background: chocolate;
+            grid-area: navbar;
+        }
+
+        aside {
+            background: chartreuse;
+            grid-area: sidebar;
+        }
+
+        main {
+            background: crimson;
+            grid-area: main;
+        }
+
+        footer {
+            background: darkorchid;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="assets/img/logo-html.webp" alt="Logo Html" width="80" height="80">
+    </div>
+    <nav>nav</nav>
+    <aside>sidebar</aside>
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus a sapiente ducimus cupiditate consequuntur, iusto pariatur laudantium reiciendis consectetur, voluptates voluptatum consequatur deleniti adipisci non, repudiandae ipsum sunt beatae tenetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus a sapiente ducimus cupiditate consequuntur, iusto pariatur laudantium reiciendis consectetur, voluptates voluptatum consequatur deleniti adipisci non, repudiandae ipsum sunt beatae tenetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus a sapiente ducimus cupiditate consequuntur, iusto pariatur laudantium reiciendis consectetur, voluptates voluptatum consequatur deleniti adipisci non, repudiandae ipsum sunt beatae tenetur.</p>
+    </main>
+    <footer>Isso é um rodapé sim</footer>
+</body>
+</html>
