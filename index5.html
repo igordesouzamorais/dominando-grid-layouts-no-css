@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominando grid layouts no CSS</title>
+    <style>
+        .container {            
+            display: grid;
+            border: solid 2px black;
+
+            grid-template-columns: repeat(2, 1fr) 4fr repeat(2, 1fr);
+            grid-template-rows: 50px 100px 200px;
+        }
+
+        .item-a {
+            background: rgba(210, 105, 30, 0.8);
+            text-align: center;
+
+            grid-column-start: 2;
+            grid-column-end: 5;
+
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        .item-b {
+            background: rgba(0, 255, 255, 0.6);
+            text-align: center;
+            
+            grid-column-start: 1;
+            grid-column-end: span 3; /*3 celulas*/
+
+            grid-row-start: 2;
+            grid-row-end: span 2; /*2 celulas*/
+        }
+
+        .item-c {
+            background: rgba(220, 20, 60, 0.8);
+            text-align: center;
+
+            grid-column: 4 / span 2;
+            grid-row: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-a">Item a</div>
+        <div class="item item-b">Item b</div>
+        <div class="item item-c">Item c</div>
+    </div>
+</body>
+</html>
