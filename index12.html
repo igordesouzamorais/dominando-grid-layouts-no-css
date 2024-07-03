@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominando grid layouts no CSS</title>
+    <style>
+        body {
+            display: grid;
+            /* height: 100vh;
+
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 100px 4fr 1fr;
+
+            grid-template-areas:
+                "logo navbar"
+                "sidebar main"
+                "sidebar footer"
+            ; */
+
+            grid-template: 
+            "header header header header" 100px
+            "main main . sidebar" 300px
+            "footer footer footer footer" 100px
+            / 1fr 3fr 1fr 1fr
+            ;
+        }
+
+        header {
+            background: cyan;
+            grid-area: header;
+        }
+
+        aside {
+            background: chartreuse;
+            grid-area: sidebar;
+        }
+
+        main {
+            background: crimson;
+            grid-area: main;
+        }
+
+        footer {
+            background: darkorchid;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <main>main</main>
+    <aside>sidebar</aside>
+    <footer>footer</footer>
+</body>
+</html>
