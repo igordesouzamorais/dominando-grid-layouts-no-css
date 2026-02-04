@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominando grid layouts no CSS</title>
+    <style>
+        body {
+            display: grid;
+            border: 3px solid;            
+            height: 80vh;
+            
+            grid-template: repeat(3, auto) / repeat(3, auto);
+            gap: 15px;
+            
+            place-items: center;
+        }
+
+        .item {
+            border: solid 1px black;
+        }
+
+        .item-01 {
+            background: #f39c12;
+        }
+
+        .item-02 {
+            background: #d35400;
+        }
+        
+        .item-03 {
+            background: #c0392b;
+        }
+
+        .item-04 {
+            background: #2980b9;
+        }
+        
+        .item-05 {
+            background: #8e44ad;
+            justify-self: stretch;
+            align-self: center;
+        }
+        
+        .item-06 {
+            background: #7f8c8d;
+        }
+        
+        .item-07 {
+            background: #1abc9c;
+        }
+
+        .item-08 {
+            background: #2ecc71;
+        }
+
+        .item-09 {
+            background: #f1c40f;
+        }
+    </style>
+</head>
+<body>
+    <div class="item item-01">Lorem ipsum dolor</div>
+    <div class="item item-02">Igor morais</div>
+    <div class="item item-03">Jose ruebs</div>
+    <div class="item item-04">maria cleuda s morais</div>
+    <div class="item item-05">Andersons morais</div>
+    <div class="item item-06">samantha</div>
+    <div class="item item-07">duda</div>
+    <div class="item item-08">grid css na pratica</div>
+    <div class="item item-09">Ganso sitemas</div>
+</body>
+</html>
